@@ -28,3 +28,47 @@ c) Sale
 
 baza danych 
 *)Raport dla kierownika/statystyka
+
+Wersja nr 2
+1. interfejs (jako szablon, bez wypełnionych danych. Albo robimy je na początku, i każdy będzie wypełniał tą gwiazdkę którą będzie implementował, albo na samym końcu jedna osoba zrobi interfejs i podepnie pozostałe klasy)
+- Rozroznienie funkcji użytkownika (kasjer/automat,admin)
+- filmów
+- rezerwacji
+ 
+* Stworzenie interfejsu logowania
+* stworzenie interfejsu przeglądania filmów (rzeczy z karteczki nr 2)
+* interfejs graficzny sali
+* interfejs rezerwacji
+* interfejs płatności
+* kalendarz
+* ograniczenie widoczności funkcji w zależności od rodzaju użytkownika
+ 
+2. filmy
+- baza filmów
+- kalendarz
+- modyfikacje
+ 
+* Pobranie danych z bazy filmów 
+* Wyswietlenie listy filmów 
+* wyświetlanie informacji o wybranym filmie 
+* wyświetlanie kalendarza z dniami w które można obejrzeć film
+* wyświetlanie aktualnych promocji 
+* modyfikacja kalendarza(admin )
+* modyfikacja promocji (admin)
+ 
+3.Kino
+- Sala
+- Co gdzie leci teraz
+ 
+* wizualizacja sali
+* wyświetlanie dostępności miejsc 
+* rezerwacja miejsca
+* modyfikacja miejsc(kasjer może np. usunąć rezerwacje, albo przenieśc ją)
+ 
+4. Płatność 
+- Jak
+- dowód
+ 
+* Wybor sposobu płatności 
+* zapis płatności? 
+* wydruk(pdf?) Paragonu /biletu
