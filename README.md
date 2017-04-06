@@ -35,13 +35,13 @@ Wersja nr 2
 - filmów
 - rezerwacji
  
-* Stworzenie interfejsu logowania
-* stworzenie interfejsu przeglądania filmów (rzeczy z karteczki nr 2)
-* interfejs graficzny sali
-* interfejs rezerwacji
-* interfejs płatności
-* kalendarz
-* ograniczenie widoczności funkcji w zależności od rodzaju użytkownika
+ * Stworzenie interfejsu logowania
+ * stworzenie interfejsu przeglądania filmów (rzeczy z karteczki nr 2)
+ * interfejs graficzny sali
+  * interfejs rezerwacji
+ * interfejs płatności
+ * kalendarz
+ * ograniczenie widoczności funkcji w zależności od rodzaju użytkownika
  
 2. filmy
 - baza filmów
