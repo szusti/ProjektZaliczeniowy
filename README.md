@@ -31,12 +31,14 @@ baza danych
 
 Wersja nr 2
 1. interfejs (jako szablon, bez wypełnionych danych. Albo robimy je na początku, i każdy będzie wypełniał tą gwiazdkę którą będzie implementował, albo na samym końcu jedna osoba zrobi interfejs i podepnie pozostałe klasy)
+//Druga Kolumna
 - Rozroznienie funkcji użytkownika (kasjer/automat,admin)
 - filmów
 - rezerwacji
  
- a) Stworzenie interfejsu logowania
- b) stworzenie interfejsu przeglądania filmów (rzeczy z karteczki nr 2)
+//Trzecia kolumna
+ * Stworzenie interfejsu logowania
+ * stworzenie interfejsu przeglądania filmów (rzeczy z karteczki nr 2)
  * interfejs graficzny sali
   * interfejs rezerwacji
  * interfejs płatności
@@ -44,10 +46,11 @@ Wersja nr 2
  * ograniczenie widoczności funkcji w zależności od rodzaju użytkownika
  
 2. filmy
+//Druga Kolumna
 - baza filmów
 - kalendarz
 - modyfikacje
- 
+//Trzecia kolumna
 * Pobranie danych z bazy filmów 
 * Wyswietlenie listy filmów 
 * wyświetlanie informacji o wybranym filmie 
@@ -57,18 +60,20 @@ Wersja nr 2
 * modyfikacja promocji (admin)
  
 3.Kino
+//Druga Kolumna
 - Sala
 - Co gdzie leci teraz
- 
+//Trzecia kolumna 
 * wizualizacja sali
 * wyświetlanie dostępności miejsc 
 * rezerwacja miejsca
 * modyfikacja miejsc(kasjer może np. usunąć rezerwacje, albo przenieśc ją)
  
 4. Płatność 
+//Druga Kolumna
 - Jak
 - dowód
- 
+//Trzecia kolumna
 * Wybor sposobu płatności 
 * zapis płatności? 
 * wydruk(pdf?) Paragonu /biletu
