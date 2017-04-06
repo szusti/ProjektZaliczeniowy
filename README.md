@@ -35,8 +35,8 @@ Wersja nr 2
 - filmów
 - rezerwacji
  
- * Stworzenie interfejsu logowania
- * stworzenie interfejsu przeglądania filmów (rzeczy z karteczki nr 2)
+ a) Stworzenie interfejsu logowania
+ b) stworzenie interfejsu przeglądania filmów (rzeczy z karteczki nr 2)
  * interfejs graficzny sali
   * interfejs rezerwacji
  * interfejs płatności
