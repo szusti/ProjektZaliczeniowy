@@ -1,0 +1,2 @@
+C:\Users\Majkel\Source\Repos\test\ProgramowanieZespolowe\ProgramowanieZespolowe\bin\Debug\ProgramowanieZespolowe.exe.config
+C:\Users\Majkel\Source\Repos\testowo\ProgramowanieZespolowe\ProgramowanieZespolowe\bin\Debug\ProgramowanieZespolowe.exe.config
