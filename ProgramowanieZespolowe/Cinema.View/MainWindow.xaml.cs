@@ -21,5 +21,7 @@ namespace Cinema.View {
         public MainWindow() {
             InitializeComponent();
         }
+
+
     }
 }
