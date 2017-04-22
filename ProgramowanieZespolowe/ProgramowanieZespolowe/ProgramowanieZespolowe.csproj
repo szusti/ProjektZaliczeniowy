@@ -46,10 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="database\ConnectToDB.cs" />
-    <Compile Include="database\iLoadFromDB.cs" />
-    <Compile Include="database\iModificateDB.cs" />
-    <Compile Include="database\iWriteToDB.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
