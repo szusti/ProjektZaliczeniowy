@@ -70,17 +70,10 @@ namespace Cinema.View
                     JakieMiejsce.Content += Environment.NewLine + miejsca.ElementAt(i + 1);
                     s.rezerwacjamiejsce(miejsca.ElementAt(i), miejsca.ElementAt(i+1),screening_id,rezerwation_id);
 
-                }
-
-                
-                
+                }                           
             }
-            
 
-
-
-
-            Platnosc platnosc = new Platnosc(user);
+            Platnosc platnosc = new Platnosc(user, selectedFilm, miejsca,  date, screening_id,date0);
             platnosc.Show();
             this.Close();
         }

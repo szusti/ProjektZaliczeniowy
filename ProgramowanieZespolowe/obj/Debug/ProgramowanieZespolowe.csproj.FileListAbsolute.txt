@@ -26,3 +26,12 @@ C:\Users\Majkel\Source\Reposy\ProjektZaliczeniowy\ProgramowanieZespolowe\Program
 C:\Users\Majkel\Source\Reposy\ProjektZaliczeniowy\ProgramowanieZespolowe\ProgramowanieZespolowe\obj\Debug\ProgramowanieZespolowe.csproj.GenerateResource.Cache
 C:\Users\Majkel\Source\Reposy\ProjektZaliczeniowy\ProgramowanieZespolowe\ProgramowanieZespolowe\obj\Debug\ProgramowanieZespolowe.exe
 C:\Users\Majkel\Source\Reposy\ProjektZaliczeniowy\ProgramowanieZespolowe\ProgramowanieZespolowe\obj\Debug\ProgramowanieZespolowe.pdb
+C:\Users\Majkel\Source\Repo\ProjektZaliczeniowy\ProgramowanieZespolowe\bin\Debug\ProgramowanieZespolowe.exe.config
+C:\Users\Majkel\Source\Repo\ProjektZaliczeniowy\ProgramowanieZespolowe\bin\Debug\ProgramowanieZespolowe.exe
+C:\Users\Majkel\Source\Repo\ProjektZaliczeniowy\ProgramowanieZespolowe\bin\Debug\ProgramowanieZespolowe.pdb
+C:\Users\Majkel\Source\Repo\ProjektZaliczeniowy\ProgramowanieZespolowe\obj\Debug\ProgramowanieZespolowe.csprojResolveAssemblyReference.cache
+C:\Users\Majkel\Source\Repo\ProjektZaliczeniowy\ProgramowanieZespolowe\obj\Debug\ProgramowanieZespolowe.Form1.resources
+C:\Users\Majkel\Source\Repo\ProjektZaliczeniowy\ProgramowanieZespolowe\obj\Debug\ProgramowanieZespolowe.Properties.Resources.resources
+C:\Users\Majkel\Source\Repo\ProjektZaliczeniowy\ProgramowanieZespolowe\obj\Debug\ProgramowanieZespolowe.csproj.GenerateResource.Cache
+C:\Users\Majkel\Source\Repo\ProjektZaliczeniowy\ProgramowanieZespolowe\obj\Debug\ProgramowanieZespolowe.exe
+C:\Users\Majkel\Source\Repo\ProjektZaliczeniowy\ProgramowanieZespolowe\obj\Debug\ProgramowanieZespolowe.pdb

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Majkel\Desktop\ProjektZaliczeniowy\Cinema.View\obj\Debug\
+C:\Users\Majkel\Source\Repo\ProjektZaliczeniowy\Cinema.View\obj\Debug\
 Cinema.View
 none
 false
 DEBUG;TRACE
-C:\Users\Majkel\Desktop\ProjektZaliczeniowy\Cinema.View\App.xaml
+C:\Users\Majkel\Source\Repo\ProjektZaliczeniowy\Cinema.View\App.xaml
 71551013919
 
 15-696747366
-141756588352
+141665783225
 InfoOFilmie.xaml;MainWindow.xaml;Registration.xaml;Repertuar.xaml;Platnosc.xaml;PotwierdzeniePlatnosci.xaml;SalaKinowa.xaml;
 
-True
+False
 

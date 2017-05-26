@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Drawing;
-
+using Cinema.Controller;
 
 
 namespace Cinema.View
@@ -23,12 +23,21 @@ namespace Cinema.View
     public partial class Platnosc : Window
     {
         private String user;
-        
-        public Platnosc(String user)
+        private String selectedFilm;
+        private String date;
+        private String date0;
+        private List<int> miejsca;
+        private int screening_id;
+        public Platnosc(String user, String selectedFilm, List<int> miejsca, String date, int screening_id, String date0)
         {
             InitializeComponent();
             this.user = user;
-            
+            this.selectedFilm = selectedFilm;
+            this.date = date;
+            this.miejsca = miejsca;
+            this.screening_id = screening_id;
+            this.date0 = date0;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -92,6 +101,15 @@ namespace Cinema.View
             MainWindow repertuar = new MainWindow(user);
             repertuar.Show();
             this.Close();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            List<string> aa =new List<string>();
+            for (int i = 0; i < miejsca.Count()/2; i++) { 
+             aa.Add("R"+miejsca[i].ToString()+"M" + miejsca[i+1].ToString());
+            }
+            TicketCreator a = new TicketCreator(aa,selectedFilm,"1",date,"",screening_id.ToString());
         }
     }
 }
