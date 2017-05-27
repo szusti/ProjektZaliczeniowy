@@ -39,8 +39,7 @@ namespace Cinema.View
             this.date0 = date0;
 
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private bool valid()
         {
             bool valid = true;
 
@@ -88,7 +87,13 @@ namespace Cinema.View
 
             }
 
-            if (valid)
+            return valid;
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           
+
+            if (valid())
             {
                 MainWindow mw = new MainWindow(user);
                 mw.Show();
@@ -105,11 +110,14 @@ namespace Cinema.View
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            List<string> aa =new List<string>();
+            if (valid()) { 
+                List<string> aa =new List<string>();
             for (int i = 0; i < miejsca.Count()/2; i++) { 
              aa.Add("R"+miejsca[i].ToString()+"M" + miejsca[i+1].ToString());
             }
             TicketCreator a = new TicketCreator(aa,selectedFilm,"1",date,"",screening_id.ToString());
+                MessageBox.Show("Drukniete na pulpita");
+            }
         }
     }
 }
