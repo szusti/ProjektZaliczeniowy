@@ -28,6 +28,7 @@ namespace Cinema.View
         private String date0;
         private List<int> miejsca;
         private int screening_id;
+
         public Platnosc(String user, String selectedFilm, List<int> miejsca, String date, int screening_id, String date0)
         {
             InitializeComponent();
@@ -37,6 +38,8 @@ namespace Cinema.View
             this.miejsca = miejsca;
             this.screening_id = screening_id;
             this.date0 = date0;
+
+
 
         }
         private bool valid()
@@ -89,17 +92,7 @@ namespace Cinema.View
 
             return valid;
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-           
-
-            if (valid())
-            {
-                MainWindow mw = new MainWindow(user);
-                mw.Show();
-                this.Close();
-            }
-        }
+        
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -110,6 +103,8 @@ namespace Cinema.View
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            
+
             if (valid()) { 
                 List<string> aa =new List<string>();
             for (int i = 0; i < miejsca.Count()/2; i++) { 
@@ -118,6 +113,9 @@ namespace Cinema.View
             TicketCreator a = new TicketCreator(aa,selectedFilm,"1",date,"",screening_id.ToString());
                 MessageBox.Show("Drukniete na pulpita");
             }
+            Logowanie logowanie  = new Logowanie();
+            logowanie.Show();
+            this.Close();
         }
     }
 }

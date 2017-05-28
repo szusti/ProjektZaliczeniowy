@@ -62,15 +62,15 @@ namespace Cinema.View
             if (miejsca != null)
             {
                 Cinema.Controller.Sala s = new Cinema.Controller.Sala();
-                int rezerwation_id=s.rezerwacja_nowa(screening_id,2,2);
+                int rezerwation_id = s.rezerwacja_nowa(screening_id, 2, 2);
                 for (int i = 0; i < miejsca.Count; i = i + 2)
                 {
-                    
+
                     JakiRzad.Content += Environment.NewLine + miejsca.ElementAt(i);
                     JakieMiejsce.Content += Environment.NewLine + miejsca.ElementAt(i + 1);
-                    s.rezerwacjamiejsce(miejsca.ElementAt(i), miejsca.ElementAt(i+1),screening_id,rezerwation_id);
+                    s.rezerwacjamiejsce(miejsca.ElementAt(i), miejsca.ElementAt(i + 1), screening_id, rezerwation_id);
 
-                }                           
+                }
             }
 
             Platnosc platnosc = new Platnosc(user, selectedFilm, miejsca,  date, screening_id,date0);
