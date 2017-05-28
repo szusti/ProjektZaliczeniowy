@@ -110,7 +110,16 @@ namespace Cinema.View
             for (int i = 0; i < miejsca.Count()/2; i++) { 
              aa.Add("R"+miejsca[i].ToString()+"M" + miejsca[i+1].ToString());
             }
-            TicketCreator a = new TicketCreator(aa,selectedFilm,"1",date,"",screening_id.ToString());
+                if (miejsca != null)
+                {
+                    Cinema.Controller.Sala s = new Cinema.Controller.Sala();
+                    int rezerwation_id = s.rezerwacja_nowa(screening_id, 2, 2);
+                    for (int i = 0; i < miejsca.Count; i = i + 2)
+                    {
+                        s.rezerwacjamiejsce(miejsca.ElementAt(i), miejsca.ElementAt(i + 1), screening_id, rezerwation_id);
+                    }
+                }
+                TicketCreator a = new TicketCreator(aa,selectedFilm,"1",date,"",screening_id.ToString());
                 MessageBox.Show("Drukniete na pulpita");
             }
             Logowanie logowanie  = new Logowanie();
