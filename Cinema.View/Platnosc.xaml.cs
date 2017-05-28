@@ -121,10 +121,11 @@ namespace Cinema.View
                 }
                 TicketCreator a = new TicketCreator(aa,selectedFilm,"1",date,"",screening_id.ToString());
                 MessageBox.Show("Drukniete na pulpita");
+                Logowanie logowanie = new Logowanie();
+                logowanie.Show();
+                this.Close();
             }
-            Logowanie logowanie  = new Logowanie();
-            logowanie.Show();
-            this.Close();
+            
         }
     }
 }

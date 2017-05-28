@@ -100,5 +100,12 @@ namespace Cinema.View {
                 this.Close();
             }
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Logowanie logowanie = new Logowanie();
+            logowanie.Show();
+            this.Close();
+        }
     }
 }
