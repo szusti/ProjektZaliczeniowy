@@ -21,24 +21,55 @@ namespace Cinema.View
     {
         private String user;
         public Logowanie()
-        {
-           
+        { 
             InitializeComponent();
+        }
+
+        private bool valid()
+        {
+            bool valid = true;
+
+            if (String.IsNullOrEmpty(nameTestBox.Text) || nameTestBox.Text.Length < 3)
+            {
+                nameTestBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                valid = false;
+            }
+            else
+            {
+                nameTestBox.BorderBrush = new SolidColorBrush(Colors.DarkGray);
+            }
+
+            if (String.IsNullOrEmpty(passwordTestBox.Password) || passwordTestBox.Password.Length < 3)
+            {
+                passwordTestBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                valid = false;
+
+            }
+            else
+            {
+                passwordTestBox.BorderBrush = new SolidColorBrush(Colors.DarkGray);
+            }
+            return valid;
         }
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
-            Cinema.Controller.Uzytkownik m = new Uzytkownik();
-            bool zalogowanie = m.logowanie(nameTestBox.Text, passwordTestBox.Text);
-            namelabel.Content = zalogowanie; 
-            if(zalogowanie == true)
+            if (valid())
             {
-                user = m.getUserPosition(nameTestBox.Text);
-                //namelabel.Content = user; -- Do celow testowych
+                Cinema.Controller.Uzytkownik m = new Uzytkownik();
+                bool zalogowanie = m.logowanie(nameTestBox.Text, passwordTestBox.Password);
+                if (!zalogowanie) {
+                    namelabel.Content = "Logowanie nie powiodło się";
+                } 
+                else
+                {
+                    user = m.getUserPosition(nameTestBox.Text);
+                    //namelabel.Content = user; -- Do celow testowych
 
-                MainWindow repertuar = new MainWindow(user);
-                repertuar.Show();
-                this.Close();
+                    MainWindow repertuar = new MainWindow(user);
+                    repertuar.Show();
+                    this.Close();
+                }
             }
         }
 

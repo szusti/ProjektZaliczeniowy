@@ -5,21 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema.View"
         mc:Ignorable="d"
-        Title="Registration Form" Height="304.419" Width="291.846">
+        Title="Registration Form" Height="297.419" Width="291.846">
     <Grid Margin="0,0,2,0">
-        <GroupBox Header="Rejestracja" HorizontalAlignment="Left" Height="229" Margin="18,31,0,0" VerticalAlignment="Top" FontSize="20" Width="252"/>
+        <GroupBox Header="Rejestracja" HorizontalAlignment="Left" Height="218" Margin="18,31,0,0" VerticalAlignment="Top" FontSize="20" Width="252"/>
         <Label Content="Login:" HorizontalAlignment="Left" Margin="85,68,0,0" VerticalAlignment="Top" Width="49"/>
 
-        <Label x:Name="namelabel" HorizontalAlignment="Left" Margin="84,182,0,0" VerticalAlignment="Top" Width="170" Height="26"/>
+        <Label x:Name="namelabel" HorizontalAlignment="Left" Margin="85,223,0,0" VerticalAlignment="Top" Width="170" Height="26"/>
 
-        <Button x:Name="registerButton" Content="Rejestracja" HorizontalAlignment="Left" Margin="164,213,0,0" VerticalAlignment="Top" Width="90" Click="registerButton_Click" Height="30"/>
+        <Button x:Name="registerButton" Content="Rejestracja" HorizontalAlignment="Left" Margin="164,193,0,0" VerticalAlignment="Top" Width="90" Click="registerButton_Click" Height="30"/>
         <ComboBox x:Name="positionComboBox" HorizontalAlignment="Left" Margin="134,155,0,0" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="labelstan" Content="Stanowisko:" HorizontalAlignment="Left" Margin="54,151,0,0" VerticalAlignment="Top" Height="26" Width="80"/>
         <Label x:Name="passwordLabel" Content="Hasło:" Margin="84,96,148,0" VerticalAlignment="Top" RenderTransformOrigin="0.393,0.977"/>
         <PasswordBox x:Name="passwordTestBox" HorizontalAlignment="Left" Margin="134,94,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
         <Label x:Name="passwordLabel2" Content="Powtórz hasło:" Margin="40,125,148,0" VerticalAlignment="Top" RenderTransformOrigin="0.393,0.977" Height="24"/>
         <PasswordBox x:Name="passwordTestBox2" HorizontalAlignment="Left" Margin="134,124,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
-        <Button Content="Wstecz" HorizontalAlignment="Left" Margin="70,213,0,0" VerticalAlignment="Top" Width="89" Height="30" Click="Button_Click"/>
+        <Button Content="Wstecz" HorizontalAlignment="Left" Margin="70,193,0,0" VerticalAlignment="Top" Width="89" Height="30" Click="Button_Click"/>
         <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Height="23" Margin="134,68,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
     </Grid>
 
