@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema.View"
         mc:Ignorable="d"
-        Title="Login/Register Form" Height="250" Width="525"
+        Title="Login Form" Height="250" Width="525"
         MinHeight="250" MinWidth="525">
     <Grid>
         <Grid HorizontalAlignment="Left" Height="209" VerticalAlignment="Top" Width="507" Margin="9,10,0,0">
             <GroupBox Header="Logowanie" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" Height="149" Width="475" FontSize="20"/>
             <Label x:Name="namelabel" Content="Login:" Margin="0,58,423,0" VerticalAlignment="Top" RenderTransformOrigin="1.981,8.846" HorizontalAlignment="Right" Width="45"/>
-            <Label x:Name="passwordLabel" Content="Haslo:" Margin="39,89,423,0" VerticalAlignment="Top" RenderTransformOrigin="0.393,0.977"/>
+            <Label x:Name="passwordLabel" Content="Hasło:" Margin="39,89,423,0" VerticalAlignment="Top" RenderTransformOrigin="0.393,0.977"/>
             <TextBox x:Name="nameTestBox" Margin="89,61,298,125" TextWrapping="Wrap" Text=""/>
             <TextBox x:Name="passwordTestBox" Height="23" Margin="89,0,298,97" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom"/>
             <Button x:Name="loginButton" Content="Zaloguj" HorizontalAlignment="Left" Margin="39,120,0,0" VerticalAlignment="Top" Width="170" Click="loginButton_Click" Height="32"/>

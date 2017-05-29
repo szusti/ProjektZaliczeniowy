@@ -99,8 +99,8 @@ namespace Cinema.Model
                 MySqlCommand cmd = new MySqlCommand("INSERT INTO user(  id , username ,  password ,  position ) VALUES(" + id + " , '" + login + "' ,  '" + password + "' , '" + position + "')", cn);
                 MySqlDataReader a = cmd.ExecuteReader();
                 a.Read();
-                return "rejestracja powiodla sie";
-            }else return "rejestracja nie powiodla sie ";
+                return "Rejestracja powiodła się";
+            }else return "Rejestracja nie powiodła się";
         }
     }
 }

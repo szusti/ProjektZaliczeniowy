@@ -32,7 +32,7 @@ namespace Cinema.Controller
             {
 
                 return a.insertNewUSer(login, password, a.genID(), position); ;
-            }else return "rejestracja nie powiodla sie";
+            }else return "Rejestracja nie powiodła się";
         }
         public List<String> getAllPosition()
         {

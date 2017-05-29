@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema.View"
         mc:Ignorable="d"
-        Title="InfoOFilmie" Height="510.305" Width="920.149">
+        Title="Movie Information" Height="510.305" Width="920.149">
     <Grid Margin="10,32,18,11">
         <Grid.RowDefinitions>
             <RowDefinition Height="407*"/>

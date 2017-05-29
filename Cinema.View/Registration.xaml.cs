@@ -31,13 +31,20 @@ namespace Cinema.View
         private void registerButton_Click(object sender, RoutedEventArgs e)
         {
            
-            string a= m.addUSer(nameTextBox.Text, passwordTestBox.Text, positionComboBox.SelectedItem.ToString());
+            string a= m.addUSer(nameTextBox.Text, passwordTestBox.Password, positionComboBox.SelectedItem.ToString());
             namelabel.Content = a;
-            if (a == "rejestracja powiodla sie") {
+            if (a == "Rejestracja powiodła się") {
                 Logowanie w = new Logowanie();
                 w.Show();
                 this.Close();
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Logowanie w = new Logowanie();
+            w.Show();
+            this.Close();
         }
     }
 }

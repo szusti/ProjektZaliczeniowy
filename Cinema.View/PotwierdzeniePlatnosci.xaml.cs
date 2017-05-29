@@ -36,10 +36,11 @@ namespace Cinema.View
             this.date0 = date0;
             JakiFilm.Content = selectedFilm;
 
-            JakiRzad.Content = "Rząd";
-            JakieMiejsce.Content = "Miejsce";
-            JakaSala.Content = "Sala: " +1;
+            JakiRzad.Content = "";
+            JakieMiejsce.Content = "";
+            JakaSala.Content = "" +1;
             KiedyLeci.Content = date0+" "+date;
+            JakaCena.Content = miejsca.Count() / 2 * 20;
             if(miejsca!=null)
             for (int i = 0; i < miejsca.Count; i = i + 2)
             {
