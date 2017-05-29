@@ -5,33 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema.View"
         mc:Ignorable="d"
-        Title="InfoOFilmie" Height="703.855" Width="1292.149">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="31*"/>
-            <ColumnDefinition Width="183*"/>
-        </Grid.ColumnDefinitions>
-        <Label x:Name="tytul" Content="tytul" HorizontalAlignment="Left" Margin="454.769,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.459,-0.085" Grid.Column="1"/>
-
-        <Label x:Name="obsada" Content="Obsada:" HorizontalAlignment="Left" Margin="10,498,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.526,0.591"/>
-        <Label x:Name="rezyser" Content="Rezyser: " HorizontalAlignment="Left" Margin="7,529,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.242,0.525"/>
-        <Label x:Name="dlugosc" Content="Dlugosc trwania: " HorizontalAlignment="Left" Margin="7,560,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.448,2.416"/>
-        <Label x:Name="opis" Content="Opis: " HorizontalAlignment="Left" Margin="10,591,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.498,-0.834"/>
-        <Label x:Name="obsadaZBazy" Content="Label" HorizontalAlignment="Left" Margin="88,488,0,0" VerticalAlignment="Top" Width="1171" RenderTransformOrigin="0.5,0.5" Height="37" Grid.ColumnSpan="2">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.723"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Label x:Name="rezyserZBazy" Content="Label" HorizontalAlignment="Left" Margin="102,529,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.022,4.151" Width="1172" Grid.ColumnSpan="2"/>
-        <Label x:Name="dlugoscZBazy" Content="Label" HorizontalAlignment="Left" Margin="113,560,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.836,2.123" Width="1090" Grid.ColumnSpan="2"/>
-        <Label x:Name="opisZBazy" Content="Label" HorizontalAlignment="Left" Margin="102,591,0,0" VerticalAlignment="Top" Height="45" Width="1057" Grid.ColumnSpan="2"/>
-        <Button x:Name="powrot" Content="Powrot" HorizontalAlignment="Left" Margin="427.6,655,0,0" VerticalAlignment="Top" Width="42" Grid.Column="1" Click="powrot_Click"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="404" Margin="145.769,51,0,0" VerticalAlignment="Top" Width="720" Grid.Column="1" />
-
+        Title="InfoOFilmie" Height="510.305" Width="920.149">
+    <Grid Margin="10,32,18,11">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="407*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Informacje o filmie:" HorizontalAlignment="Left" Width="875" FontSize="20" Margin="0,-4,0,0" Height="416" VerticalAlignment="Top"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="355" Margin="25,39,0,0" VerticalAlignment="Top" Width="314" />
+        <Label x:Name="obsada" Content="Obsada:" HorizontalAlignment="Left" Margin="449,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.526,0.591" Height="26" Width="60"/>
+        <Label x:Name="rezyser" Content="Rezyser: " HorizontalAlignment="Left" Margin="449,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.242,0.525" Height="26" Width="60"/>
+        <Label x:Name="dlugosc" Content="Długość trwania: " HorizontalAlignment="Left" Margin="405,95,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.448,2.416" Height="26" Width="104"/>
+        <Label x:Name="opis" Content="Opis: " HorizontalAlignment="Left" Margin="465,127,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.498,-0.834" Height="26" Width="40"/>
+        <Label x:Name="obsadaZBazy" HorizontalAlignment="Left" Margin="509,33,0,0" VerticalAlignment="Top" Width="345" RenderTransformOrigin="0.5,0.5" Height="26"/>
+        <Label x:Name="rezyserZBazy"  HorizontalAlignment="Left" Margin="509,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.022,4.151" Width="345" Height="26"/>
+        <Label x:Name="dlugoscZBazy"  HorizontalAlignment="Left" Margin="509,95,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.836,2.123" Width="345" Height="26"/>
+        <Label x:Name="opisZBazy"  HorizontalAlignment="Left" Margin="509,127,0,0" VerticalAlignment="Top" Height="238" Width="345"/>
+        <Button x:Name="powrot" Content="Zamknij" HorizontalAlignment="Left" Margin="760,370,0,0" VerticalAlignment="Top" Width="94" Click="powrot_Click" Height="24" RenderTransformOrigin="-1.452,2.95"/>
     </Grid>
 </Window>

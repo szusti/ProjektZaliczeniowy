@@ -5,11 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema.View"
         mc:Ignorable="d"
-        Title="SalaKinowa" Height="457.313" Width="704.333">
-    <Grid x:Name="grid">
-        <Grid HorizontalAlignment="Left" Height="423" VerticalAlignment="Top" Width="696">
-            <Separator HorizontalAlignment="Left" Height="22" Margin="0,297,0,0" VerticalAlignment="Top" Width="696"/>
-            <Separator HorizontalAlignment="Left" Height="100" Margin="-48,58,0,0" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.5,0.5">
+        Title="Cinema Hall" Height="426.813" Width="673.333">
+    <Grid x:Name="grid" Margin="0,0,17,14">
+        <GroupBox Header="Sala kinowa"  FontSize="20" HorizontalAlignment="Left" Height="342" Margin="29,26,0,0" VerticalAlignment="Top" Width="608">
+            <Separator HorizontalAlignment="Left" Height="98" Margin="492,20,-74,0" VerticalAlignment="Top" Width="179" RenderTransformOrigin="0.5,0.5">
                 <Separator.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -19,29 +18,54 @@
                     </TransformGroup>
                 </Separator.RenderTransform>
             </Separator>
-            <Separator HorizontalAlignment="Left" Height="58" Margin="0,59,0,0" VerticalAlignment="Top" Width="696" RenderTransformOrigin="1.21,-2.26"/>
-
-            <Label Content="Ekran z Filmem" HorizontalAlignment="Left" Margin="272,10,0,0" VerticalAlignment="Top" Width="139" FontSize="18" FontWeight="Bold"/>
-            <Label Content="Rzędy" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Width="60" Height="25"/>
-            <Label Content="1" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top" Height="30" Width="60"/>
-            <Label Content="2" HorizontalAlignment="Left" Margin="10,162,0,0" VerticalAlignment="Top" Height="30" Width="60"/>
-            <Label Content="3" HorizontalAlignment="Left" Margin="10,197,0,0" VerticalAlignment="Top" Height="30" Width="60"/>
-            <Label Content="4" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top" Height="30" Width="60"/>
-            <Label Content="5" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top" Width="60" Height="30"/>
-            <Label Content="Kolumny" HorizontalAlignment="Left" Margin="60,66,0,0" VerticalAlignment="Top"/>
-            <Label Content="1" HorizontalAlignment="Left" Margin="121,65,0,0" VerticalAlignment="Top" Width="16" Height="25"/>
-            <Label Content="2" HorizontalAlignment="Left" Margin="196,65,0,0" VerticalAlignment="Top" Width="16" Height="25"/>
-            <Label Content="3" HorizontalAlignment="Left" Margin="275,65,0,0" VerticalAlignment="Top" Width="16" Height="25"/>
-            <Label Content="4" HorizontalAlignment="Left" Margin="354,65,0,0" VerticalAlignment="Top" Width="16" Height="25"/>
-            <Label Content="5" HorizontalAlignment="Left" Margin="429,65,0,0" VerticalAlignment="Top" Width="16" Height="25"/>
-            <Label Content="6" HorizontalAlignment="Left" Margin="510,65,0,0" VerticalAlignment="Top" Width="16" Height="25"/>
-            <Label Content="7" HorizontalAlignment="Left" Margin="577,65,0,0" VerticalAlignment="Top" Width="16" Height="25"/>
-            <Button Content="Wstecz" HorizontalAlignment="Left" Margin="173,372,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-            <Button Content="Dalej" HorizontalAlignment="Left" Margin="429,372,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-            <Button x:Name="buttonclear" Content="usuń wszystkie rezerwacje" HorizontalAlignment="Left" Height="37" Margin="537,368,0,0" VerticalAlignment="Top" Width="149" Click="buttonclear_Click"/>
-
-
-
-        </Grid>
+        </GroupBox>
+        <Separator Height="22" Margin="102,290,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="514"/>
+        <Separator HorizontalAlignment="Left" Height="99" Margin="-18,41,0,0" VerticalAlignment="Top" Width="242" RenderTransformOrigin="0.5,0.5">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform Y="90"/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Separator HorizontalAlignment="Left" Height="58" Margin="40,94,0,0" VerticalAlignment="Top" Width="576" RenderTransformOrigin="1.21,-2.26"/>
+        <Label Content="Ekran z filmem" HorizontalAlignment="Left" Margin="298,42,0,0" VerticalAlignment="Top" Width="130" FontSize="18" Height="32" />
+        <Label Content="Rzędy" HorizontalAlignment="Left" Margin="43,93,0,0" VerticalAlignment="Top" Width="44" Height="30" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="45"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="1" HorizontalAlignment="Left" Margin="84,128,0,0" VerticalAlignment="Top" Height="30" Width="26"/>
+        <Label Content="2" HorizontalAlignment="Left" Margin="84,162,0,0" VerticalAlignment="Top" Height="30" Width="26"/>
+        <Label Content="3" HorizontalAlignment="Left" Margin="84,198,0,0" VerticalAlignment="Top" Height="30" Width="26"/>
+        <Label Content="4" HorizontalAlignment="Left" Margin="84,232,0,0" VerticalAlignment="Top" Height="30" Width="26"/>
+        <Label Content="5" HorizontalAlignment="Left" Margin="84,268,0,0" VerticalAlignment="Top" Width="26" Height="30"/>
+        <Label Content="Kolumny" HorizontalAlignment="Left" Margin="54,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="45"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="1" HorizontalAlignment="Left" Margin="124,94,0,0" VerticalAlignment="Top" Width="16" Height="26"/>
+        <Label Content="2" HorizontalAlignment="Left" Margin="199,94,0,0" VerticalAlignment="Top" Width="16" Height="26"/>
+        <Label Content="3" HorizontalAlignment="Left" Margin="274,94,0,0" VerticalAlignment="Top" Width="16" Height="26"/>
+        <Label Content="4" HorizontalAlignment="Left" Margin="349,94,0,0" VerticalAlignment="Top" Width="16" Height="26"/>
+        <Label Content="5" HorizontalAlignment="Left" Margin="424,94,0,0" VerticalAlignment="Top" Width="16" Height="26"/>
+        <Label Content="6" HorizontalAlignment="Left" Margin="499,94,0,0" VerticalAlignment="Top" Width="16" Height="26"/>
+        <Label Content="7" HorizontalAlignment="Left" Margin="574,94,0,0" VerticalAlignment="Top" Width="16" Height="26"/>
+        <Button Content="Wstecz" HorizontalAlignment="Left" Margin="396,320,0,0" VerticalAlignment="Top" Width="102" Click="Button_Click" Height="30"/>
+        <Button Content="Dalej" HorizontalAlignment="Left" Margin="502,320,0,0" VerticalAlignment="Top" Width="114" Click="Button_Click_1" Height="30"/>
+        <Button x:Name="buttonclear" Content="Usuń wszystkie rezerwacje" HorizontalAlignment="Left" Height="30" Margin="100,320,0,0" VerticalAlignment="Top" Width="166" Click="buttonclear_Click"/>
     </Grid>
 </Window>

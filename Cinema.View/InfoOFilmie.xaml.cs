@@ -19,6 +19,8 @@ namespace Cinema.View
     /// </summary>
     public partial class InfoOFilmie : Window
     {
+
+        
         public InfoOFilmie(string jakiFilm)
         {
             InitializeComponent();

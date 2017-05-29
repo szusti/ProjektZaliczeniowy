@@ -26,7 +26,7 @@ namespace Cinema.View {
         public MainWindow(String user) {
             InitializeComponent();
             this.user = user;
-            listView.Items.Add("Proszem wybrac date");
+            listView.Items.Add("Najpierw wybierz datę");
             //List<string> tab = new Cinema.Controller.KalendarzFilmow().getGodziny();
             //for (int i = 0; i < tab.Count; i++) comboBox.Items.Add(tab[i]);
         }  
@@ -57,7 +57,7 @@ namespace Cinema.View {
             if (listView.SelectedItem != null)
             {
                 String test = listView.SelectedItem.ToString();
-                if (!test.Equals("Proszem wybrac date")) {
+                if (!test.Equals("Najpierw wybierz datę")) {
                     wybranyFilm.Content = test;
                     selectedFilm = test;
                     comboBox.Items.Clear();
