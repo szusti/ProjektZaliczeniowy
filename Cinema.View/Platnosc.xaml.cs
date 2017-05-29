@@ -79,6 +79,17 @@ namespace Cinema.View
 
             }
 
+            if (Type_combobox.SelectedItem == null)
+            {
+                Type_combobox.BorderBrush = new SolidColorBrush(Colors.Red);
+                valid = false;
+            }
+            else
+            {
+                Type_combobox.BorderBrush = new SolidColorBrush(Colors.DarkGray);
+
+            }
+
             if (String.IsNullOrEmpty(SecurityCode_passwordBox.Password) || SecurityCode_passwordBox.Password.Any(c => Char.IsLetter(c)) || SecurityCode_passwordBox.Password.Length < 3)
             {
                 SecurityCode_passwordBox.BorderBrush = new SolidColorBrush(Colors.Red);
@@ -107,9 +118,9 @@ namespace Cinema.View
 
             if (valid()) { 
                 List<string> aa =new List<string>();
-            for (int i = 0; i < miejsca.Count()/2; i++) { 
-             aa.Add("R"+miejsca[i].ToString()+"M" + miejsca[i+1].ToString());
-            }
+                for (int i = 0; i < miejsca.Count()/2; i++) { 
+                 aa.Add("R"+miejsca[i].ToString()+"M" + miejsca[i+1].ToString());
+                }
                 if (miejsca != null)
                 {
                     Cinema.Controller.Sala s = new Cinema.Controller.Sala();

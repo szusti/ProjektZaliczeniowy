@@ -26,17 +26,64 @@ namespace Cinema.View
             for(int i=0;i<a.Count();i++)
 
             positionComboBox.Items.Add(a[i]);
+            
+        }
+
+        private bool valid()
+        {
+            bool valid = true;
+
+            if (String.IsNullOrEmpty(nameTextBox.Text) || nameTextBox.Text.Length < 3)
+            {
+                nameTextBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                valid = false;
+
+            }
+            else
+            {
+                nameTextBox.BorderBrush = new SolidColorBrush(Colors.DarkGray);
+            }
+
+            if (String.IsNullOrEmpty(passwordTestBox.Password) || passwordTestBox.Password.Length < 3 || passwordTestBox.Password != passwordTestBox2.Password)
+            {
+                passwordTestBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                passwordTestBox2.BorderBrush = new SolidColorBrush(Colors.Red);
+                valid = false;
+            }
+            else
+            {
+                passwordTestBox2.BorderBrush = new SolidColorBrush(Colors.DarkGray);
+                passwordTestBox.BorderBrush = new SolidColorBrush(Colors.DarkGray);
+
+            }
+
+           
+            if (positionComboBox.SelectedItem == null)
+            {
+                positionComboBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                valid = false;
+            }
+            else
+            {
+                positionComboBox.BorderBrush = new SolidColorBrush(Colors.DarkGray);
+
+            }
+
+            return valid;
         }
 
         private void registerButton_Click(object sender, RoutedEventArgs e)
         {
-           
-            string a= m.addUSer(nameTextBox.Text, passwordTestBox.Password, positionComboBox.SelectedItem.ToString());
-            namelabel.Content = a;
-            if (a == "Rejestracja powiodła się") {
-                Logowanie w = new Logowanie();
-                w.Show();
-                this.Close();
+            if (valid())
+            {
+                string a = m.addUSer(nameTextBox.Text, passwordTestBox.Password, positionComboBox.SelectedItem.ToString());
+                namelabel.Content = a;
+                if (a == "Rejestracja powiodła się")
+                {
+                    Logowanie w = new Logowanie();
+                    w.Show();
+                    this.Close();
+                }
             }
         }
 
