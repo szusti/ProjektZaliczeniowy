@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema.View"
         mc:Ignorable="d"
-        Title="Płatność" Height="272.5" Width="600">
-    <Grid>
+        Title="Płatność" Height="272.5" Width="600" ResizeMode="NoResize">
+    <Grid Focusable="True">
         <GroupBox Header="Informacje o płatności:" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="177" Width="561" FontSize="20"/>
 
         <Label Content="Numer Karty Kredytowej:" BorderBrush="Red" HorizontalAlignment="Left" Margin="26,81,0,0" VerticalAlignment="Top" Width="141" x:Name="CreditCardNumber_label"/>

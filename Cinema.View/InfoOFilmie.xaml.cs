@@ -31,10 +31,10 @@ namespace Cinema.View
 
             image.Source = new BitmapImage(
         new Uri(a.setOkladka(idFilmu), UriKind.Absolute));
-            obsadaZBazy.Content=a.setObsada(idFilmu);
+            obsadaZBazy.Content =a.setObsada(idFilmu);
             rezyserZBazy.Content = a.setRezyser(idFilmu);
             dlugoscZBazy.Content = a.setDlugosc(idFilmu);
-            opisZBazy.Content = a.setOpis(idFilmu);
+            opisZBazy.Text = a.setOpis(idFilmu);
           
         }
 
@@ -42,5 +42,7 @@ namespace Cinema.View
         {
             this.Close();
         }
+
+        
     }
 }

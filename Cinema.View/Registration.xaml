@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema.View"
         mc:Ignorable="d"
-        Title="Registration Form" Height="297.419" Width="291.846">
+        Title="Registration Form" Height="297.419" Width="291.846" ResizeMode="NoResize">
     <Grid Margin="0,0,2,0">
         <GroupBox Header="Rejestracja" HorizontalAlignment="Left" Height="218" Margin="18,31,0,0" VerticalAlignment="Top" FontSize="20" Width="252"/>
         <Label Content="Login:" HorizontalAlignment="Left" Margin="85,68,0,0" VerticalAlignment="Top" Width="49"/>
