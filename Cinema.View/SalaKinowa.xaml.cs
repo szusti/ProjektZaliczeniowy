@@ -54,6 +54,12 @@ namespace Cinema.View
                         a.Tag = new int[2] { i, j };
                         a.Click += new System.Windows.RoutedEventHandler(this.miejce_click);
                     }
+                    else if(sala[i][j] == 1  && user.Equals("admin"))
+                    {
+                        a.Background = Brushes.Orange;
+                        a.Tag = new int[2] { i, j };
+                        a.Click += new System.Windows.RoutedEventHandler(this.miejsce_usun);
+                    }
                     else
                     {
                         a.Background = Brushes.Red;
@@ -89,6 +95,25 @@ namespace Cinema.View
             miejce.Click -= new System.Windows.RoutedEventHandler(this.miejce_cancel_click);
             miejce.Click += new System.Windows.RoutedEventHandler(this.miejce_click);
         }
+        private void miejsce_usun(object sender, RoutedEventArgs e)
+        {
+            Button miejce = sender as Button;
+
+            MessageBoxResult res = MessageBox.Show("Usunąć rezerwacje z rząd: " + ((miejce.Tag as int[])[0]+1) + " kolumna: " + ((miejce.Tag as int[])[1]+1) + "?", "zapytanie", MessageBoxButton.YesNo);
+            if(res== MessageBoxResult.Yes)
+            {
+                Cinema.Controller.Sala s = new Cinema.Controller.Sala();
+                s.del_rezerwacje(this.screening_id, ((miejce.Tag as int[])[0]+1), ((miejce.Tag as int[])[1]+1));
+                miejce.Background = Brushes.Transparent;
+                sala[(miejce.Tag as int[])[0]][(miejce.Tag as int[])[1]] = 0;
+                miejce.Click -= new System.Windows.RoutedEventHandler(this.miejsce_usun);
+                miejce.Click += new System.Windows.RoutedEventHandler(this.miejce_click);
+            }
+
+            
+        }
+
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             for (int i = 0; i < sala.Length; i++)
@@ -130,5 +155,7 @@ namespace Cinema.View
             odswiez.Show();
             this.Close();
         }
+
+       
     }
     }

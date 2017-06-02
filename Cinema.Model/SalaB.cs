@@ -101,5 +101,17 @@ namespace Cinema.Model
             cn.Close();
             return ret;
         }
+        public int del_rezerwacje(int rep, int seat)
+        {
+            cn.Open();
+
+            MySqlCommand cmd = new MySqlCommand(
+                " delete from seat_reserved where screening_id="+rep+ " and seat_id="+ seat + ";", cn);
+            // MySqlCommand cmd = new MySqlCommand("delete from seat_reserved; insert into seat_reserved values(1,1,15,1)", cn);
+            int ret = cmd.ExecuteNonQuery();
+
+            cn.Close();
+            return ret;
+        }
     }
 }

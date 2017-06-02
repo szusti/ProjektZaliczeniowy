@@ -118,8 +118,10 @@ namespace Cinema.View
 
             if (valid()) { 
                 List<string> aa =new List<string>();
-                for (int i = 0; i < miejsca.Count()/2; i++) { 
-                 aa.Add("R"+miejsca[i].ToString()+"M" + miejsca[i+1].ToString());
+               // for (int i = 0; i < miejsca.Count()/2; i=i++) {
+               for (int i = 0; i < miejsca.Count(); i = i+2)
+                    {
+                        aa.Add("R"+miejsca[i].ToString()+"M" + miejsca[i+1].ToString());
                 }
                 if (miejsca != null)
                 {

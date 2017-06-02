@@ -61,5 +61,9 @@ namespace Cinema.Controller
         {
             return salaB.usun_rezerwacje(film_id, (row-1)*7+numer, data+" "+godzina);
         }
+        public int del_rezerwacje(int rep_id, int row, int numer)
+        {
+            return salaB.del_rezerwacje(rep_id, (row - 1) * 7 + numer);
+        }
     }
 }
