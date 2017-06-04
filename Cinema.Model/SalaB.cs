@@ -89,7 +89,7 @@ namespace Cinema.Model
         public int usun_rezerwacje(string film,int seat,string start)
         {
             cn.Open();
-
+            //usuwa wszystkie rezerwacje da zrobione w jednej sesji i rezerwacje z tablicy rezerwacji
             MySqlCommand cmd = new MySqlCommand(
                 " Set @idfilm:= (Select id from movie where title='" + film + "');"+
                 " Set @idrez := (Select reservation.id from reservation join seat_reserved on reservation.id = seat_reserved.reservation_id join screening on reservation.screening_id=screening.id where screening.screening_start='" + start + "' and screening.movie_id=@idfilm  and  seat_reserved.seat_id=" + seat + ");" +
@@ -113,5 +113,17 @@ namespace Cinema.Model
             cn.Close();
             return ret;
         }
-    }
+        public int numer_audytorium(int screening_id)
+        {
+            cn.Open();
+
+            MySqlCommand cmd = new MySqlCommand("Select auditorium_id from screening where id=" + screening_id, cn);
+            MySqlDataReader a = cmd.ExecuteReader();
+            a.Read();
+            int num = a.GetInt32(0);
+            cn.Close();
+            return num;
+        }
+
+        }
 }

@@ -38,7 +38,7 @@ namespace Cinema.View
                 buttonclear.Visibility = System.Windows.Visibility.Hidden;
             };
             Cinema.Controller.Sala s = new Cinema.Controller.Sala();
-            sala = s.sala(1, screening_id);//1 bo tylko 1 sala dostępna
+            sala = s.sala(screening_id);
             for (int i = 0; i < sala.Length; i++)
             {
                 for (int j = 0; j < sala[i].Length; j++)
@@ -54,7 +54,7 @@ namespace Cinema.View
                         a.Tag = new int[2] { i, j };
                         a.Click += new System.Windows.RoutedEventHandler(this.miejce_click);
                     }
-                    else if(sala[i][j] == 1  && user.Equals("admin"))
+                    else if(sala[i][j] == 1  && (user.Equals("admin") || user.Equals("kasjer")))
                     {
                         a.Background = Brushes.Orange;
                         a.Tag = new int[2] { i, j };
@@ -103,7 +103,7 @@ namespace Cinema.View
             if(res== MessageBoxResult.Yes)
             {
                 Cinema.Controller.Sala s = new Cinema.Controller.Sala();
-                s.del_rezerwacje(this.screening_id, ((miejce.Tag as int[])[0]+1), ((miejce.Tag as int[])[1]+1));
+                s.del_rezerwacje(this.screening_id, ((miejce.Tag as int[])[0]+1), ((miejce.Tag as int[])[1]+1),7);
                 miejce.Background = Brushes.Transparent;
                 sala[(miejce.Tag as int[])[0]][(miejce.Tag as int[])[1]] = 0;
                 miejce.Click -= new System.Windows.RoutedEventHandler(this.miejsce_usun);

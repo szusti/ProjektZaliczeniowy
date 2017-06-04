@@ -12,10 +12,10 @@ namespace Cinema.Controller
 
         Model.SalaB salaB = new SalaB();
 
-        public byte[][] sala(int id_sala,int id_screening)
+        public byte[][] sala(int id_screening)
         {
             //1 bo nie ma innej w baze
-            id_sala = 1;
+            int id_sala = salaB.numer_audytorium(id_screening);
             //2 wartosci z bazy
             int[] wielkosc = salaB.wielkosc(id_sala);
             //utworzenie tablicy byte[row][number] wypełninej 0
@@ -49,21 +49,25 @@ namespace Cinema.Controller
           return  salaB.rezerwacja(screenid,2,2);
         }
 
-        public void rezerwacjamiejsce(int row, int number,int screening_id,int rezerwation_id)//int ilosc miejcs w rzedzie dl tablicy
+        public void rezerwacjamiejsce(int row, int number,int screening_id,int rezerwation_id,int dl_rzedu)//int ilosc miejcs w rzedzie dl tablicy
         {
-            salaB.rezerwacjamiejsce(rezerwation_id, ((row - 1) * 7) + number,screening_id);
+            salaB.rezerwacjamiejsce(rezerwation_id, (salaB.numer_audytorium(screening_id)-1)*1000+((row - 1) * dl_rzedu) + number,screening_id);
         }
         public void czysc()
         {
             salaB.czysc();
         }
-        public int usun_rezerwacje(string film_id, int row, int numer,string godzina,string data)
+        public int usun_rezerwacje(string film_id, int row, int numer,string godzina,string data,int screening_id, int dl_rzedu)
         {
-            return salaB.usun_rezerwacje(film_id, (row-1)*7+numer, data+" "+godzina);
+            return salaB.usun_rezerwacje(film_id, (salaB.numer_audytorium(screening_id) - 1) * 1000 + (row-1)* dl_rzedu + numer, data+" "+godzina);
         }
-        public int del_rezerwacje(int rep_id, int row, int numer)
+        public int del_rezerwacje(int screening_id, int row, int numer, int dl_rzedu)
         {
-            return salaB.del_rezerwacje(rep_id, (row - 1) * 7 + numer);
+            return salaB.del_rezerwacje(screening_id, (salaB.numer_audytorium(screening_id) - 1) * 1000 + (row - 1) * dl_rzedu + numer);
         }
-    }
+        public int audytorium_num(int screening_id)
+        {
+            return salaB.numer_audytorium(screening_id);
+        }
+        }
 }
