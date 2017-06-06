@@ -39,18 +39,17 @@ namespace Cinema.View {
             DateTime? date = calendar.SelectedDate;
             string a = date.ToString();
             Console.WriteLine("Zmienna a to: " + a);
-            string b = a.Substring(0, a.IndexOf('.'));
-            string c = a.Substring(a.IndexOf('.') + 1, a.IndexOf('.'));
-            string d = a.Substring(a.IndexOf(c) + 3, 4);
+            string day = date.Value.Day.ToString(); 
+            string month = date.Value.Month.ToString();
+            string year = date.Value.Year.ToString();
             //string a = date.ToString(); //moje nie ruszać (Kamil)
             //string b = a.Substring(8, 2);
             //string c = a.Substring(5, 2);
             //string d = a.Substring(0, 4);
-            List<string> tab = new List<string>();
-            Cinema.Controller.KalendarzFilmow ac = new Cinema.Controller.KalendarzFilmow();
-            tab = ac.getlistaFilmow(d, c, b);
-            for (int i = 0; i < tab.Count; i++) listView.Items.Add(tab[i]);
-    
+            List<string> films = new List<string>();
+            KalendarzFilmow filmCalendary = new KalendarzFilmow();
+            films = filmCalendary.GetFilms(year, month, day);
+            listView.ItemsSource = films;
         }
 
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)

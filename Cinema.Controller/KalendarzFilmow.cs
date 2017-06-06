@@ -12,7 +12,7 @@ namespace Cinema.Controller
     {
 
         Model.KalendarzFilmowB kfb = new KalendarzFilmowB();
-        public List<String> getlistaFilmow(String year, String month, String day)
+        public List<String> GetFilms(String year, String month, String day)
         {
             return kfb.listaFilmow(year, month,day);
         }
