@@ -142,6 +142,10 @@
       <Project>{d0047499-f946-415d-8af8-30286733979c}</Project>
       <Name>Cinema.Controller</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Cinema.Model\Cinema.Model.csproj">
+      <Project>{be27ec9e-dd51-45c7-b111-55230bc1d3d8}</Project>
+      <Name>Cinema.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

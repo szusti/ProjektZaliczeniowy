@@ -13,20 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Cinema.Controller;
+using Cinema.Model;
+
 namespace Cinema.View {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
         //zmienna wysylana do interfejsu InfoOFilmie 
-        private String selectedFilm;
+        private Film selectedFilm;
         //kto sie zalogowal
         private String user;
         private int id_film;
         public MainWindow(String user) {
             InitializeComponent();
             this.user = user;
-            listView.Items.Add("Najpierw wybierz datę");
+            listView.Items.Add(new Film(-1,"Najpierw wybierz datę",null));
             //List<string> tab = new Cinema.Controller.KalendarzFilmow().getGodziny();
             //for (int i = 0; i < tab.Count; i++) comboBox.Items.Add(tab[i]);
         }  
@@ -34,8 +36,7 @@ namespace Cinema.View {
 
         private void calendar_SelectedDateChanged(object sender, RoutedEventArgs e)
         {
-            listView.Items.Clear();
-            comboBox.Items.Clear();
+            if (listView.ItemsSource == null) listView.Items.Clear();
             DateTime? date = calendar.SelectedDate;
             string a = date.ToString();
             Console.WriteLine("Zmienna a to: " + a);
@@ -46,34 +47,21 @@ namespace Cinema.View {
             //string b = a.Substring(8, 2);
             //string c = a.Substring(5, 2);
             //string d = a.Substring(0, 4);
-            List<string> films = new List<string>();
+
             KalendarzFilmow filmCalendary = new KalendarzFilmow();
-            films = filmCalendary.GetFilms(year, month, day);
-            listView.ItemsSource = films;
+            listView.ItemsSource = filmCalendary.GetFilmsEntities(year, month, day);
         }
 
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (listView.SelectedItem != null)
             {
-                String test = listView.SelectedItem.ToString();
-                if (!test.Equals("Najpierw wybierz datę")) {
-                    wybranyFilm.Content = test;
-                    selectedFilm = test;
-                    comboBox.Items.Clear();
-                    Cinema.Controller.InfoOFilmie a = new Cinema.Controller.InfoOFilmie();
-                    id_film = a.getId(selectedFilm);
+                Film film = listView.SelectedItem as Film;
+                if (!film.Title.Equals("Najpierw wybierz datę")) {
+                    wybranyFilm.Content = film.Title;
+                    selectedFilm = film;
                     DateTime? date = calendar.SelectedDate;
-                    //string aa = date.ToString(); //dla Kamila bo ma dziwne ustawienia daty
-                    //string b = aa.Substring(8, 2);
-                    //string c = aa.Substring(5, 2);
-                    //string d = aa.Substring(0, 4);
-                    string aa = date.ToString();
-                    string b = aa.Substring(0, aa.IndexOf('.'));
-                    string c = aa.Substring(aa.IndexOf('.') + 1, aa.IndexOf('.'));
-                    string d = aa.Substring(aa.IndexOf(c) + 3, 4);
-                    List<string> tabgodziny = new Cinema.Controller.KalendarzFilmow().getGodziny(id_film, d, c, b);
-                    for (int i = 0; i < tabgodziny.Count; i++) comboBox.Items.Add(tabgodziny[i]);
+                    filmsHours.ItemsSource = film.Hours;
                 }
             }
         }
@@ -82,20 +70,20 @@ namespace Cinema.View {
         {
             if(selectedFilm == null)
             {
-                    selectedFilm = "Matrix";
+                    selectedFilm = new Film(0,"Matrix", null);
             }
-            InfoOFilmie iOF = new InfoOFilmie(selectedFilm);
+          InfoOFilmie iOF = new InfoOFilmie(selectedFilm.Title);
             iOF.Show();
         }
 
         private void button_Click_1(object sender, RoutedEventArgs e)
         {
-            if(selectedFilm != null && comboBox.SelectedItem != null)
+            if(selectedFilm != null && filmsHours.SelectedItem != null)
             {
-                string date = comboBox.SelectedItem.ToString();
+                string date = filmsHours.SelectedItem.ToString();
                 Cinema.Controller.KalendarzFilmow ac = new Cinema.Controller.KalendarzFilmow();
                 int id_screening = ac.id_screening_wybranego(id_film, date, calendar.SelectedDate.Value.ToShortDateString());
-                SalaKinowa salakinowa = new SalaKinowa(user, selectedFilm, date, id_screening,calendar.SelectedDate.Value.ToShortDateString());
+                SalaKinowa salakinowa = new SalaKinowa(user, selectedFilm.Title, date, id_screening,calendar.SelectedDate.Value.ToShortDateString());
                 salakinowa.Show();
                 this.Close();
             }
@@ -106,6 +94,10 @@ namespace Cinema.View {
             Logowanie logowanie = new Logowanie();
             logowanie.Show();
             this.Close();
+        }
+
+        private void hours_selectionChanged(object sender, SelectionChangedEventArgs e) {
+
         }
     }
 }

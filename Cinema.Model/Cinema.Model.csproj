@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Film.cs" />
     <Compile Include="InfoOFilmieB .cs" />
     <Compile Include="KalendarzFilmowB.cs" />
     <Compile Include="SalaB.cs" />

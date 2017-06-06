@@ -5,19 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema.View"
         mc:Ignorable="d"
-        Title="Movie Showtimes" Height="375" Width="590" ResizeMode="NoResize">
+        Title="Movie Showtimes" Height="383.452" Width="566.178" ResizeMode="NoResize">
     <Grid Margin="10,-10,10,31">
         <GroupBox Header="Repertuar" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="275" Width="543" FontSize="20">
-            <ListView x:Name="listView" Margin="20,74,18,43" SelectionChanged="listView_SelectionChanged" FontSize="14"/>
+            <ListView Name="listView" Margin="20,74,188,43" SelectionChanged="listView_SelectionChanged" FontSize="14">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Title" Width="auto"  DisplayMemberBinding="{Binding Title}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
         </GroupBox>
-        <DatePicker x:Name="calendar" Margin="131,82,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="161"  SelectedDateChanged="calendar_SelectedDateChanged" Height="24"/>
+        <ListView Name="filmsHours" Margin="373,140,11,0" SelectionChanged="hours_selectionChanged" FontSize="14" Height="124" VerticalAlignment="Top"/>
+        <DatePicker x:Name="calendar" Margin="137,83,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="161"  SelectedDateChanged="calendar_SelectedDateChanged" Height="24"/>
         <Button Content="Info o filmie" HorizontalAlignment="Left" Margin="36,269,0,0" VerticalAlignment="Top" Width="96" Click="Button_Click" Height="26"/>
         <Button Content="Dalej" HorizontalAlignment="Left" Height="26" Margin="433,269,0,0" VerticalAlignment="Top" Width="96" Click="button_Click_1"/>
-        <Label x:Name="label1" Content="Wybierz dzień:" VerticalAlignment="Top" Margin="35,81,432,0" Height="25"/>
-        <Label x:Name="label2" Content="Wybierz godzinę:" Margin="324,82,129,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,6.385"/>
-        <Label x:Name="label3" Content="Wybierz film:" VerticalAlignment="Top" Margin="35,112,379,0" Height="25"/>
+        <Label x:Name="label1" Content="Wybierz dzień:" VerticalAlignment="Top" Margin="35,81,408,0" Height="25"/>
+        <Label x:Name="label2" Content="Wybierz godzinę:" Margin="373,112,55,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,6.385"/>
+        <Label x:Name="label3" Content="Wybrany film:" VerticalAlignment="Top" Margin="35,112,379,0" Height="25"/>
         <Label x:Name="wybranyFilm" Content="" HorizontalAlignment="Left" Margin="131,112,0,0" VerticalAlignment="Top" Width="172"/>
-        <ComboBox x:Name="comboBox" VerticalAlignment="Top" Margin="434,82,0,0" RenderTransformOrigin="-0.933,-2.864" HorizontalAlignment="Left" Width="96" Height="24" />
         <Button Content="Wstecz" HorizontalAlignment="Left" Height="26" Margin="324,269,0,0" VerticalAlignment="Top" Width="104" Click="Button_Click_2"/>
     </Grid>
 </Window>
