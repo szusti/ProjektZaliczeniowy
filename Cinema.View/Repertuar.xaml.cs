@@ -70,7 +70,7 @@ namespace Cinema.View {
         {
             if(selectedFilm == null)
             {
-                    selectedFilm = new Film(0,"Matrix", null);
+                    selectedFilm = new Film(-1,"Matrix", null);
             }
           InfoOFilmie iOF = new InfoOFilmie(selectedFilm.Title);
             iOF.Show();

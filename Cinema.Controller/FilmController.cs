@@ -31,7 +31,8 @@ namespace Cinema.Controller {
 
         private Film CreateEntity(int filmId, string year, string month, string day) {
             FilmDBHelper filmsDetailsProvider = new FilmDBHelper();
-            List<string> hours = filmsCalendarProvider.GetHoursOfFilm(filmId, year, month, day);
+            List<string> hours = new List<string>();
+            filmsCalendarProvider.GetHoursOfFilm(filmId, year, month, day).ForEach(x => hours.Add(DateTime.Parse(x).ToString("HH:mm")));
             string title = filmsDetailsProvider.GetFilmTitle(filmId);
             Console.WriteLine(title);
             Film film = new Film(filmId, title, hours);

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema.View"
         mc:Ignorable="d"
-        Title="Movie Showtimes" Height="383.452" Width="566.178" ResizeMode="NoResize">
+        Title="Movie Showtimes" Height="609.489" Width="566.178" ResizeMode="NoResize">
     <Grid Margin="10,-10,10,31">
         <GroupBox Header="Repertuar" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="275" Width="543" FontSize="20">
             <ListView Name="listView" Margin="20,74,188,43" SelectionChanged="listView_SelectionChanged" FontSize="14">
