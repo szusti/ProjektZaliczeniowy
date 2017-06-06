@@ -48,7 +48,7 @@ namespace Cinema.View {
             //string c = a.Substring(5, 2);
             //string d = a.Substring(0, 4);
 
-            KalendarzFilmow filmCalendary = new KalendarzFilmow();
+            FilmsController filmCalendary = new FilmsController();
             listView.ItemsSource = filmCalendary.GetFilmsEntities(year, month, day);
         }
 
@@ -81,7 +81,7 @@ namespace Cinema.View {
             if(selectedFilm != null && filmsHours.SelectedItem != null)
             {
                 string date = filmsHours.SelectedItem.ToString();
-                Cinema.Controller.KalendarzFilmow ac = new Cinema.Controller.KalendarzFilmow();
+                Cinema.Controller.FilmsController ac = new Cinema.Controller.FilmsController();
                 int id_screening = ac.id_screening_wybranego(id_film, date, calendar.SelectedDate.Value.ToShortDateString());
                 SalaKinowa salakinowa = new SalaKinowa(user, selectedFilm.Title, date, id_screening,calendar.SelectedDate.Value.ToShortDateString());
                 salakinowa.Show();

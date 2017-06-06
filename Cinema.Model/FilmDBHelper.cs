@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 namespace Cinema.Model
 {
-    public class InfoOFilmieB
+    public class FilmDBHelper
     {
 
         MySqlConnection cn = new MySqlConnection(@"server=lamp.ii.us.edu.pl;user id=ii302052;persistsecurityinfo=True;database=ii302052;password=123456Op*;");
 
-        public List<string> listaFilmow()
+        public List<string> GetAllFilmsTitles()
         {
             List<string> tab = new List<string>();
             cn.Open();
@@ -27,7 +27,7 @@ namespace Cinema.Model
             return tab;
         }
 
-        public int pobierzIdFilmu(String nazwaFilmu)
+        public int GetFilmId(String nazwaFilmu)
         {
             cn.Open();
             MySqlCommand cmd = new MySqlCommand("select id from movie where title =" + "'"+nazwaFilmu+"'", cn);
@@ -45,7 +45,7 @@ namespace Cinema.Model
                 return 0;
             }
         }
-        public string FilmPoDacie(int index)
+        public string GetFilmTitle(int index)
         {
             cn.Open();
             MySqlCommand cmd = new MySqlCommand("select title from movie where id ="+index, cn);

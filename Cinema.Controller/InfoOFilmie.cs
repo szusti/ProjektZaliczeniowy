@@ -9,10 +9,10 @@ namespace Cinema.Controller
 {
     public class InfoOFilmie
     {
-        Model.InfoOFilmieB a = new InfoOFilmieB();
+        Model.FilmDBHelper a = new FilmDBHelper();
         public List<string> listaFilmow()
         {
-            return a.listaFilmow();
+            return a.GetAllFilmsTitles();
         }
         public string setOkladka(int index)
         {
@@ -37,7 +37,7 @@ namespace Cinema.Controller
         }
         public int getId(String filmName)
         {
-            return a.pobierzIdFilmu(filmName);
+            return a.GetFilmId(filmName);
         }
     }
 }

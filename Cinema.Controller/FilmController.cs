@@ -7,14 +7,14 @@ using Cinema.Model;
 using MySql.Data.MySqlClient;
 
 namespace Cinema.Controller {
-    public class KalendarzFilmow {
+    public class FilmsController {
 
-        Model.KalendarzFilmowB filmsCalendarProvider = new KalendarzFilmowB();
+        Model.FilmDBProvider filmsCalendarProvider = new FilmDBProvider();
         public List<String> GetFilms(String year, String month, String day) {
-            return filmsCalendarProvider.listaFilmow(year, month, day);
+            return filmsCalendarProvider.GetFilmsTitles(year, month, day);
         }
         public List<String> getGodziny(int idfilmu, String year, String month, String day) {
-            return filmsCalendarProvider.godziny(idfilmu, year, month, day);
+            return filmsCalendarProvider.GetHoursOfFilm(idfilmu, year, month, day);
         }
         public int id_screening_wybranego(int idfilmu, string godzina, string data) {
             return filmsCalendarProvider.screening_id(idfilmu, godzina, data);
@@ -30,9 +30,9 @@ namespace Cinema.Controller {
         }
 
         private Film CreateEntity(int filmId, string year, string month, string day) {
-            InfoOFilmieB filmsDetailsProvider = new InfoOFilmieB();
-            List<string> hours = filmsCalendarProvider.godziny(filmId, year, month, day);
-            string title = filmsDetailsProvider.FilmPoDacie(filmId);
+            FilmDBHelper filmsDetailsProvider = new FilmDBHelper();
+            List<string> hours = filmsCalendarProvider.GetHoursOfFilm(filmId, year, month, day);
+            string title = filmsDetailsProvider.GetFilmTitle(filmId);
             Console.WriteLine(title);
             Film film = new Film(filmId, title, hours);
             return film;
