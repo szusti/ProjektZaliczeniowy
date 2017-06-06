@@ -62,3 +62,8 @@ C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\Cinema.Model\bin\Debug\Cin
 C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\Cinema.Model\obj\Debug\Cinema.Model.csprojResolveAssemblyReference.cache
 C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\Cinema.Model\obj\Debug\Cinema.Model.dll
 C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\Cinema.Model\obj\Debug\Cinema.Model.pdb
+E:\Git\REPO\ProjektZaliczeniowy4\Cinema.Model\bin\Debug\Cinema.Model.dll
+E:\Git\REPO\ProjektZaliczeniowy4\Cinema.Model\bin\Debug\Cinema.Model.pdb
+E:\Git\REPO\ProjektZaliczeniowy4\Cinema.Model\obj\Debug\Cinema.Model.csprojResolveAssemblyReference.cache
+E:\Git\REPO\ProjektZaliczeniowy4\Cinema.Model\obj\Debug\Cinema.Model.dll
+E:\Git\REPO\ProjektZaliczeniowy4\Cinema.Model\obj\Debug\Cinema.Model.pdb

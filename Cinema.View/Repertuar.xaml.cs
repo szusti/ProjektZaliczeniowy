@@ -38,6 +38,7 @@ namespace Cinema.View {
             comboBox.Items.Clear();
             DateTime? date = calendar.SelectedDate;
             string a = date.ToString();
+            Console.WriteLine("Zmienna a to: " + a);
             string b = a.Substring(0, a.IndexOf('.'));
             string c = a.Substring(a.IndexOf('.') + 1, a.IndexOf('.'));
             string d = a.Substring(a.IndexOf(c) + 3, 4);
