@@ -16,7 +16,7 @@ namespace Cinema.Controller
          if(miejsca.Count()>1)  for(int i=1;i<miejsca.Count();i++) html += "," + miejsca[i];
             html += "</h1><h1 style=\"color: #5e9ca0;\">Film : " + film + "</h1><h1 style=\"color: #5e9ca0;\">Sala : " + sala + "</h1><h1 style=\"color: #5e9ca0;\">Godzina Rozpoczęcia : " + godzina + "</h1><h1 style=\"color: #5e9ca0;\">cena : " + (miejsca.Count() * 20).ToString()+" monet" + "</h1><h1 style=\"color: #5e9ca0; text-align: right;\">Unikatowy id Rejestracji : " + id + "</h1><p><strong>&nbsp;</strong></p>";
             PdfDocument pdf = PdfGenerator.GeneratePdf(html, PageSize.A4);
-            pdf.Save(Environment.GetFolderPath(Environment.SpecialFolder.Desktop)+ "\\document.pdf");
+            pdf.Save(Environment.GetFolderPath(Environment.SpecialFolder.Desktop)+ "\\Ticket.pdf");
             
 
         }

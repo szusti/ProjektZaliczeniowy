@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema.View"
         mc:Ignorable="d"
-        Title="Movie Showtimes" Height="609.489" Width="566.178" ResizeMode="NoResize">
-    <Grid Margin="10,-10,10,31">
-        <GroupBox Header="Repertuar" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="275" Width="543" FontSize="20">
+        Title="Movie Showtimes" Height="365.889" Width="587.778" ResizeMode="NoResize">
+    <Grid Margin="0,0,-6.4,4">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF4D6CB3" Offset="0.064"/>
+                <GradientStop Color="White" Offset="0.63"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <GroupBox Header="Repertuar" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="263" Width="543" FontSize="20">
             <ListView Name="listView" Margin="20,74,188,43" SelectionChanged="listView_SelectionChanged" FontSize="14">
                 <ListView.View>
                     <GridView>
@@ -17,15 +23,27 @@
             </ListView>
 
         </GroupBox>
-        <ListView Name="filmsHours" Margin="373,140,11,0" SelectionChanged="hours_selectionChanged" FontSize="14" Height="124" VerticalAlignment="Top"/>
-        <DatePicker x:Name="calendar" Margin="137,83,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="161"  SelectedDateChanged="calendar_SelectedDateChanged" Height="24"/>
-        <Button Content="Info o filmie" HorizontalAlignment="Left" Margin="36,269,0,0" VerticalAlignment="Top" Width="96" Click="Button_Click" Height="26"/>
-        <Button Content="Dalej" HorizontalAlignment="Left" Height="26" Margin="433,269,0,0" VerticalAlignment="Top" Width="96" Click="button_Click_1"/>
+        <ListView Name="filmsHours" Margin="373,140,55,0" SelectionChanged="hours_selectionChanged" FontSize="14" Height="94" VerticalAlignment="Top"/>
+        <DatePicker x:Name="calendar" Margin="137,83,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="161"  SelectedDateChanged="calendar_SelectedDateChanged" Height="24" SelectedDateFormat="Short"/>
+        <Button Content="Info o filmie" HorizontalAlignment="Left" Margin="36,269,0,0" VerticalAlignment="Top" Width="96" Click="Button_Click" Height="26" Background="#FFF4F7FC" BorderBrush="#FF5879B0" Cursor="Pen">
+            <Button.Effect>
+                <DropShadowEffect Color="#FF739CE2" Opacity="0.5" ShadowDepth="3"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Dalej" HorizontalAlignment="Left" Height="26" Margin="433,269,0,0" VerticalAlignment="Top" Width="96" Click="button_Click_1" RenderTransformOrigin="0.562,-0.208" IsDefault="True" Cursor="Hand" Background="#FFF4F7FC">
+            <Button.Effect>
+                <DropShadowEffect Opacity="0.7" Color="#FF739CE2"/>
+            </Button.Effect>
+        </Button>
         <Label x:Name="label1" Content="Wybierz dzień:" VerticalAlignment="Top" Margin="35,81,408,0" Height="25"/>
         <Label x:Name="label2" Content="Wybierz godzinę:" Margin="373,112,55,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,6.385"/>
         <Label x:Name="label3" Content="Wybrany film:" VerticalAlignment="Top" Margin="35,112,379,0" Height="25"/>
         <Label x:Name="wybranyFilm" Content="" HorizontalAlignment="Left" Margin="131,112,0,0" VerticalAlignment="Top" Width="172"/>
-        <Button Content="Wstecz" HorizontalAlignment="Left" Height="26" Margin="324,269,0,0" VerticalAlignment="Top" Width="104" Click="Button_Click_2"/>
+        <Button Content="Wstecz" HorizontalAlignment="Left" Height="26" Margin="324,269,0,0" VerticalAlignment="Top" Width="104" Click="Button_Click_2" Background="#FFF4F7FC" Cursor="Hand">
+            <Button.Effect>
+                <DropShadowEffect Opacity="0.5" Color="#FF739CE2" ShadowDepth="3"/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>
 

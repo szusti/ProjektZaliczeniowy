@@ -7,19 +7,33 @@
         mc:Ignorable="d"
         Title="Płatność" Height="272.5" Width="600" ResizeMode="NoResize">
     <Grid Focusable="True">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF4D6CB3" Offset="0"/>
+                <GradientStop Color="White" Offset="0.88"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <GroupBox Header="Informacje o płatności:" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="177" Width="561" FontSize="20"/>
 
         <Label Content="Numer Karty Kredytowej:" BorderBrush="Red" HorizontalAlignment="Left" Margin="26,81,0,0" VerticalAlignment="Top" Width="141" x:Name="CreditCardNumber_label"/>
         <TextBox HorizontalAlignment="Left" Height="25" Margin="172,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" x:Name="CreditCardNumber_textbox" MaxLength="16" RenderTransformOrigin="0.978,0.68"/>
-        <Button Content="Zapłać" HorizontalAlignment="Left" Margin="460,178,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
-        <Button Content="Anuluj" HorizontalAlignment="Left" Margin="378,178,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="Zapłać" HorizontalAlignment="Left" Margin="460,178,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2" IsDefault="True" Cursor="Hand">
+            <Button.Effect>
+                <DropShadowEffect Color="#FF739CE2" Opacity="0.7"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Anuluj" HorizontalAlignment="Left" Margin="378,178,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Cursor="Hand" AutomationProperties.HelpText="Go Back to the Shadow" ClickMode="Press" UseLayoutRounding="False">
+            <Button.Effect>
+                <DropShadowEffect Color="#FF739CE2" Opacity="0.5" ShadowDepth="3"/>
+            </Button.Effect>
+        </Button>
         <Label Content="System płatności:" HorizontalAlignment="Left" Margin="314,82,0,0" VerticalAlignment="Top" Height="28"/>
         <ComboBox HorizontalAlignment="Left" Margin="415,82,0,0" VerticalAlignment="Top" Width="120" x:Name="Type_combobox" >
             <ComboBoxItem Content="Visa" HorizontalAlignment="Left" Width="118"/>
             <ComboBoxItem Content="Master Card" HorizontalAlignment="Left" Width="118"/>
         </ComboBox>
         <Label Content="Data Ważności (mm/yy):" HorizontalAlignment="Left" Margin="26,119,0,0" VerticalAlignment="Top" Width="141"/>
-        <Label Content="Kod CVV2:" HorizontalAlignment="Left" Margin="350,123,0,0" VerticalAlignment="Top" Width="65"/>
+        <Label Content="Kod :" HorizontalAlignment="Left" Margin="350,123,0,0" VerticalAlignment="Top" Width="65"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="172,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" x:Name="ExpireDateMm_textbox" MaxLength="2"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="238,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" x:Name="ExpireDateYy_textbox" MaxLength="2"/>
         <Label Content="/" HorizontalAlignment="Left" Margin="221,121,0,0" VerticalAlignment="Top" Height="28" Width="16" RenderTransformOrigin="0.938,0.536"/>
