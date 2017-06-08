@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema.View"
         mc:Ignorable="d"
-        Title="Login Form" Height="250" Width="525"
+        Title="Login Form" Height="255.6" Width="525"
         MinHeight="250" MinWidth="525" IsHitTestVisible="True" ResizeMode="NoResize">
     <Grid>
         <Grid HorizontalAlignment="Left" Height="219" VerticalAlignment="Top" Width="516" AllowDrop="True">
@@ -19,19 +19,19 @@
             <Label x:Name="passwordLabel_Copy" Content="Login:" Margin="39,61,423,0" VerticalAlignment="Top" RenderTransformOrigin="0.537,0.667" Height="28"/>
             <Label x:Name="namelabel" Margin="0,155,298,0" VerticalAlignment="Top" RenderTransformOrigin="1.981,8.846" HorizontalAlignment="Right" Width="170" Height="30"/>
             <Label x:Name="passwordLabel" Content="Hasło:" Margin="39,89,423,0" VerticalAlignment="Top" RenderTransformOrigin="0.393,0.977"/>
-            <TextBox x:Name="nameTestBox" Margin="89,61,298,125" TextWrapping="Wrap" Text=""/>
-            <PasswordBox x:Name="passwordTestBox" Height="23" Margin="89,0,298,97" VerticalAlignment="Bottom"/>
-            <Button x:Name="loginButton" Content="Zaloguj" HorizontalAlignment="Left" Margin="39,118,0,0" VerticalAlignment="Top" Width="170" Click="loginButton_Click" Height="32" Cursor="Hand">
+            <TextBox x:Name="nameTestBox" Margin="89,61,298,135" TextWrapping="Wrap" Text=""/>
+            <PasswordBox x:Name="passwordTestBox" Height="23" Margin="89,0,298,102" VerticalAlignment="Bottom"/>
+            <Button x:Name="loginButton" Content="Zaloguj" HorizontalAlignment="Left" Margin="48,134,0,0" VerticalAlignment="Top" Width="170" Click="loginButton_Click" Height="32" Cursor="Hand">
                 <Button.Effect>
                     <DropShadowEffect Color="#FF7D7DEB" Opacity="0.5" ShadowDepth="2"/>
                 </Button.Effect>
             </Button>
-            <Button x:Name="guestButton" Content="Zaloguj się normalnie " Margin="0,61,62,116" RenderTransformOrigin="0.368,0.504" HorizontalAlignment="Right" Width="170" Click="guestButton_Click" IsDefault="True" Cursor="Hand" AutomationProperties.HelpText="Normal rezerwation">
+            <Button x:Name="guestButton" Content="Zaloguj jako gość" Margin="0,61,71,116" RenderTransformOrigin="0.368,0.504" HorizontalAlignment="Right" Width="170" Click="guestButton_Click" IsDefault="True" Cursor="Hand" AutomationProperties.HelpText="Normal rezerwation">
                 <Button.Effect>
                     <DropShadowEffect Opacity="0.7" Color="#FF7474DA" ShadowDepth="3"/>
                 </Button.Effect>
             </Button>
-            <Button x:Name="registerButton" Content="Rejestracja" HorizontalAlignment="Left" Margin="275,118,0,0" VerticalAlignment="Top" Width="170" Click="registerButton_Click" Height="32" Cursor="Hand" >
+            <Button x:Name="registerButton" Content="Rejestracja" HorizontalAlignment="Left" Margin="275,134,0,0" VerticalAlignment="Top" Width="170" Click="registerButton_Click" Height="32" Cursor="Hand" >
                 <Button.Effect>
                     <DropShadowEffect Color="#FF7D7DEB" ShadowDepth="2" Direction="300" Opacity="0.5"/>
                 </Button.Effect>
