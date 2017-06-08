@@ -24,7 +24,8 @@ namespace Cinema.View {
         private Film selectedFilm;
         //kto sie zalogowal
         private String user;
-        private int id_film;
+        int id_film;
+
         public MainWindow(String user) {
             InitializeComponent();
             this.user = user;
@@ -82,7 +83,7 @@ namespace Cinema.View {
             {
                 string date = filmsHours.SelectedItem.ToString();
                 Cinema.Controller.FilmsController ac = new Cinema.Controller.FilmsController();
-                int id_screening = ac.id_screening_wybranego(id_film, date, calendar.SelectedDate.Value.ToShortDateString());
+                int id_screening = ac.id_screening_wybranego(selectedFilm.Id, date, calendar.SelectedDate.Value.ToShortDateString());
                 SalaKinowa salakinowa = new SalaKinowa(user, selectedFilm.Title, date, id_screening,calendar.SelectedDate.Value.ToShortDateString());
                 salakinowa.Show();
                 this.Close();
@@ -98,6 +99,11 @@ namespace Cinema.View {
 
         private void hours_selectionChanged(object sender, SelectionChangedEventArgs e) {
 
+        }
+
+        private void show_Preview(object sender, RoutedEventArgs e) {
+            AllFilmsPreview preview = new AllFilmsPreview(user, this);
+preview.Show();
         }
     }
 }

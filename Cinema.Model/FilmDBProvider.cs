@@ -37,13 +37,27 @@ namespace Cinema.Model
             connection.Close();
             return hours;
         }
-/// <summary>
-/// Zwraca listę wszystkich tytułów danego dnia
-/// </summary>
-/// <param name="year"></param>
-/// <param name="month"></param>
-/// <param name="day"></param>
-/// <returns></returns>
+
+        public List<String> GetDatesOfFilm(int idFilmu) {
+            List<String> dates = new List<String>();
+            connection.Open();
+            MySqlCommand cmd = new MySqlCommand("  SELECT DATE(screening_start) as aa FROM screening where movie_id = " + idFilmu, connection);
+            MySqlDataReader a = cmd.ExecuteReader();
+            while (a.Read()) {
+                dates.Add(a.GetString(0));
+            }
+            a.Close();
+            connection.Close();
+            return dates;
+        }
+
+        /// <summary>
+        /// Zwraca listę wszystkich tytułów danego dnia
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="day"></param>
+        /// <returns></returns>
         public List<String> GetFilmsTitles(String year, String month, String day)
         {
             FilmDBHelper filmDBHelper = new FilmDBHelper();

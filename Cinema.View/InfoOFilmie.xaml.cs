@@ -29,8 +29,7 @@ namespace Cinema.View
             String jakiFilmWybrany = jakiFilm;      
             int idFilmu = a.getId(jakiFilm);
 
-            image.Source = new BitmapImage(
-        new Uri(a.setOkladka(idFilmu), UriKind.Absolute));
+            image.Source = new BitmapImage(new Uri(a.setOkladka(idFilmu), UriKind.Absolute));
             obsadaZBazy.Content =a.setObsada(idFilmu);
             rezyserZBazy.Content = a.setRezyser(idFilmu);
             dlugoscZBazy.Content = a.setDlugosc(idFilmu);

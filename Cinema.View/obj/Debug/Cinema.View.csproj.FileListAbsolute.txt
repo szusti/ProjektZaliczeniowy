@@ -437,3 +437,5 @@ E:\Git\REPO\ProjektZaliczeniowy4\Cinema.View\obj\Debug\SalaKinowa.baml
 E:\Git\REPO\ProjektZaliczeniowy4\Cinema.View\obj\Debug\Cinema.View.g.resources
 E:\Git\REPO\ProjektZaliczeniowy4\Cinema.View\obj\Debug\Cinema.View.Properties.Resources.resources
 E:\Git\REPO\ProjektZaliczeniowy4\Cinema.View\obj\Debug\Cinema.View.csproj.GenerateResource.Cache
+E:\Git\REPO\ProjektZaliczeniowy4\Cinema.View\obj\Debug\AllFilmsPreview.g.cs
+E:\Git\REPO\ProjektZaliczeniowy4\Cinema.View\obj\Debug\AllFilmsPreview.baml

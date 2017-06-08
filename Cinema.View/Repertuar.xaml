@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cinema.View"
         mc:Ignorable="d"
-        Title="Movie Showtimes" Height="609.489" Width="566.178" ResizeMode="NoResize">
+        Title="Movie Showtimes" Height="362.852" Width="566.178" ResizeMode="NoResize">
     <Grid Margin="10,-10,10,31">
         <GroupBox Header="Repertuar" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="275" Width="543" FontSize="20">
             <ListView Name="listView" Margin="20,74,188,43" SelectionChanged="listView_SelectionChanged" FontSize="14">
@@ -26,6 +26,7 @@
         <Label x:Name="label3" Content="Wybrany film:" VerticalAlignment="Top" Margin="35,112,379,0" Height="25"/>
         <Label x:Name="wybranyFilm" Content="" HorizontalAlignment="Left" Margin="131,112,0,0" VerticalAlignment="Top" Width="172"/>
         <Button Content="Wstecz" HorizontalAlignment="Left" Height="26" Margin="324,269,0,0" VerticalAlignment="Top" Width="104" Click="Button_Click_2"/>
+        <Button x:Name="button" Content="Sprawdź wszystkie filmy" HorizontalAlignment="Left" Margin="333,83,0,0" VerticalAlignment="Top" Width="167" Click="show_Preview" />
     </Grid>
 </Window>
 

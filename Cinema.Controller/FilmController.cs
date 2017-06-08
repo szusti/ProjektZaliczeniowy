@@ -38,5 +38,26 @@ namespace Cinema.Controller {
             Film film = new Film(filmId, title, hours);
             return film;
         }
+
+        public List<FilmWithImage> GetFilmsWithImageEntities() {
+            FilmDBHelper filmsDetailsProvider = new FilmDBHelper();
+            List<int> filmsId = filmsDetailsProvider.GetAllFilmsIds();
+            List<FilmWithImage> films = new List<FilmWithImage>();
+            filmsId.ForEach(x => films.Add(CreateFilmWithImageEntities(x)));
+            return films;
+        }
+
+        private FilmWithImage CreateFilmWithImageEntities(int filmId) {
+            FilmDBHelper filmsDetailsProvider = new FilmDBHelper();
+            List<DateTime> dates = new List<DateTime>();
+            Dictionary<DateTime, List<string>> datesAndHours = new Dictionary<DateTime, List<string>>();
+            filmsCalendarProvider.GetDatesOfFilm(filmId).ForEach(x => dates.Add(DateTime.Parse(x)));
+            dates.ForEach(x => datesAndHours.Add(x, filmsCalendarProvider.GetHoursOfFilm(filmId, x.Year.ToString(), x.Month.ToString(), x.Day.ToString())));
+            string title = filmsDetailsProvider.GetFilmTitle(filmId);
+            Console.WriteLine(title);
+            FilmWithImage film = new FilmWithImage(filmId, title, dates, datesAndHours);
+            return film;
+        }
+
     }
 }

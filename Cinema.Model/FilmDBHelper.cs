@@ -27,6 +27,20 @@ namespace Cinema.Model
             return tab;
         }
 
+        public List<int> GetAllFilmsIds() {
+            List<int> filmsId = new List<int>();
+            cn.Open();
+            MySqlCommand cmd = new MySqlCommand("select id from movie", cn);
+            MySqlDataReader a = cmd.ExecuteReader();
+            while (a.Read()) {
+                a.Read();
+                filmsId.Add(a.GetInt32("id"));
+            }
+            a.Close();
+            cn.Close();
+            return filmsId;
+        }
+
         public int GetFilmId(String nazwaFilmu)
         {
             cn.Open();

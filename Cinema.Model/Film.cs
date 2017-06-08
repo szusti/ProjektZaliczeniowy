@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace Cinema.Model {
     public class Film {
@@ -15,5 +16,7 @@ namespace Cinema.Model {
             Title = title;
             Hours = hours;
         }
+
+        
     }
 }

@@ -9,35 +9,35 @@ namespace Cinema.Controller
 {
     public class InfoOFilmie
     {
-        Model.FilmDBHelper a = new FilmDBHelper();
+        Model.FilmDBHelper DbHelper = new FilmDBHelper();
         public List<string> listaFilmow()
         {
-            return a.GetAllFilmsTitles();
+            return DbHelper.GetAllFilmsTitles();
         }
         public string setOkladka(int index)
         {
             //return "http://beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg";
-            return a.pobieranieDanychZBazy(index, "cover");
+            return DbHelper.pobieranieDanychZBazy(index, "cover");
         }
         public string setObsada(int index)
         {        
-            return a.pobieranieDanychZBazy(index,"cast");
+            return DbHelper.pobieranieDanychZBazy(index,"cast");
         }
         public string setRezyser(int index)
         {            
-            return a.pobieranieDanychZBazy(index, "director");
+            return DbHelper.pobieranieDanychZBazy(index, "director");
         }
         public string setDlugosc(int index)
         {
-            return a.pobieranieDanychZBazy(index, "duration_min");
+            return DbHelper.pobieranieDanychZBazy(index, "duration_min");
         }
         public string setOpis(int index)
         {
-            return a.pobieranieDanychZBazy(index, "description");
+            return DbHelper.pobieranieDanychZBazy(index, "description");
         }
         public int getId(String filmName)
         {
-            return a.GetFilmId(filmName);
+            return DbHelper.GetFilmId(filmName);
         }
     }
 }
